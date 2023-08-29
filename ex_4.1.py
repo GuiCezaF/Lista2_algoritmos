@@ -13,17 +13,17 @@ print('{:>9}{:>9}{:>9}{:>9}{:>9}'.format(
     'Graus', 'Radianos', 'Seno', 'Cosseno', 'Tangente'))
 
 for graus in range(0, 361, 30):
-    radianos = math.radians(graus)
-    seno = math.sin(radianos)
-    cosseno = math.cos(radianos)
+    rad = math.radians(graus)
+    seno = math.sin(rad)
+    cosseno = math.cos(rad)
 
     if graus == 90:
-        tangente = math.inf
+        tan = math.inf
 
     elif graus == 270:
-        tangente = -math.inf
+        tan = -math.inf
     else:
-        tangente = math.tan(radianos)
+        tan = math.tan(rad)
 
     print('{:>9.2f}{:>9.2f}{:>9.2f}{:>9.2f}{:>9.2f}'.format(
-        graus, radianos, seno, cosseno, tangente))
+        graus, rad, seno, cosseno, tan))

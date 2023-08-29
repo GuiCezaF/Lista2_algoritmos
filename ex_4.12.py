@@ -3,16 +3,16 @@
     Calculando pi para cada pedido.
     O programa deve terminar quando for digitado '0'.
 '''
-import math
-import random
+import math as m
+import random as r
 
 
 def gera_coordenadas_aleatorias():
     ''' Gera par de coordenadas aleatórias.'''
 
-    x = random.random()
+    x = r.random()
 
-    y = random.random()
+    y = r.random()
 
     return x, y
 
@@ -20,7 +20,7 @@ def gera_coordenadas_aleatorias():
 def coordenadas_dentro_circulo(x, y):
     ''' Testa  se coordenadas estão dentro do círculo de raio 1.'''
 
-    return math.hypot(x, y) < 1
+    return m.hypot(x, y) < 1
 
 
 def calcula_pi(n):
@@ -38,7 +38,7 @@ def calcula_pi(n):
 
     pi = 4 * conta_circulo / n
 
-    erro = math.fabs(pi - math.pi)
+    erro = m.fabs(pi - m.pi)
 
     return pi, erro
 
